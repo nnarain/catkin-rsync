@@ -13,7 +13,8 @@ try:
     latest_tag = subprocess.check_output(shlex.split('git describe --tags --abbrev=0'), cwd=root)
 except Exception as e:
     print('Error getting latest git tag. {}'.format(str(e)))
-    exit(1)
+    # exit(1)
+    latest_tag = '0.0.0'
 
 setup(
     name='catkin-rsync',
